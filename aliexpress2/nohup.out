@@ -1,0 +1,34 @@
+2017-03-08 21:53:15.178036
+starting
+Traceback (most recent call last):
+  File "urls.py", line 25, in <module>
+    gethtml(url=url,file_name=a)
+  File "/root/aliexpress2/js.py", line 20, in gethtml
+    driver.get(url=url)
+  File "/usr/lib/python2.7/site-packages/selenium/webdriver/remote/webdriver.py", line 248, in get
+    self.execute(Command.GET, {'url': url})
+  File "/usr/lib/python2.7/site-packages/selenium/webdriver/remote/webdriver.py", line 234, in execute
+    response = self.command_executor.execute(driver_command, params)
+  File "/usr/lib/python2.7/site-packages/selenium/webdriver/remote/remote_connection.py", line 408, in execute
+    return self._request(command_info[0], url, body=data)
+  File "/usr/lib/python2.7/site-packages/selenium/webdriver/remote/remote_connection.py", line 478, in _request
+    resp = opener.open(request, timeout=self._timeout)
+  File "/usr/lib64/python2.7/urllib2.py", line 431, in open
+    response = self._open(req, data)
+  File "/usr/lib64/python2.7/urllib2.py", line 449, in _open
+    '_open', req)
+  File "/usr/lib64/python2.7/urllib2.py", line 409, in _call_chain
+    result = func(*args)
+  File "/usr/lib64/python2.7/urllib2.py", line 1244, in http_open
+    return self.do_open(httplib.HTTPConnection, req)
+  File "/usr/lib64/python2.7/urllib2.py", line 1217, in do_open
+    r = h.getresponse(buffering=True)
+  File "/usr/lib64/python2.7/httplib.py", line 1089, in getresponse
+    response.begin()
+  File "/usr/lib64/python2.7/httplib.py", line 444, in begin
+    version, status, reason = self._read_status()
+  File "/usr/lib64/python2.7/httplib.py", line 400, in _read_status
+    line = self.fp.readline(_MAXLINE + 1)
+  File "/usr/lib64/python2.7/socket.py", line 476, in readline
+    data = self._sock.recv(self._rbufsize)
+KeyboardInterrupt

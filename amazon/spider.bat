@@ -1,0 +1,1 @@
+@start scrapy crawl ama
