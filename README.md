@@ -1,0 +1,2 @@
+# alienlu
+aliexpress为速卖通关键字搜索爬虫，利用了selenium和phatomjs模拟js点击进行爬取
