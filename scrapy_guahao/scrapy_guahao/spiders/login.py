@@ -16,8 +16,8 @@ def guahao(id):
     login_url = 'https://wap.91160.com/user/login.html'
     headers = {
         'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.133 Safari/537.36'}
-    data = {'username': '15887095041',
-            'password': 'wanglm0529'}
+    data = {'username': '',
+            'password': ''}
     s.post(url=login_url, headers=headers, data=data, verify=False)
     print u'#################登录成功#########################'
     sch_url = 'https://wap.91160.com/doctor/detlnew.html?' + \
