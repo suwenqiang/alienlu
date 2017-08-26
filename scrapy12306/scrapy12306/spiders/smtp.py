@@ -7,7 +7,7 @@ from email.mime.text import MIMEText
 def send_mail(id):
     date = time.strftime('%m-%d %H:%M')
 
-    mail_host = 'smtp.qian88.com.cn'
+    mail_host = ''
 
     mail_user = 'XXXXX.com.cn'
     mail_passwd = 'XXXXX)'
