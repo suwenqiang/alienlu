@@ -22,9 +22,9 @@ loginHeaders = {
 	'Accept-Encoding':'gzip, deflate',
 }
 loginPayload={
-	"username":"81140140@qq.com",
-	"password":"Hayabusa1340!#$)",
-	"client_id":"PbCREuPr3iaFANEDjtiEzXooFl7mXGQ7",
+	"username":"",
+	"password":"",
+	"client_id":"",
 	"ux_id":"com.nike.commerce.snkrs.ios",
 	"grant_type":"password",
 	'keepMeLoggedIn':'true'
@@ -63,7 +63,7 @@ print html2.json()
 pay_url = 'https://api.nike.com/payment/preview/v2/'
 pay_data = {"checkoutId":checkoutid,"total":1399,"currency":"CNY","country":"CN",
             "items":[{"productId":"b1700e8e-f7c0-5734-bf8a-e575c82b6ec0",
-                      "shippingAddress":{"address1":"大中华国际金融中心A栋","address2":"34","city":"深圳市","state":"CN-44","postalCode":"518000","county":"福田区","country":"CN"}}],"paymentInfo":[{"id":paymentid,"billingInfo":{"name":{"firstName":"俊杰","lastName":"杨"},"address":{"address1":"大中华国际金融中心A栋","city":"深圳市","state":"CN-44","postalCode":"518000","county":"福田区","country":"CN"},"contactInfo":{"phoneNumber":"+8618665971006","email":"81140140@qq.com"}},"type":"Alipay"}]}
+                      "shippingAddress":{"address1":"大中华","address2":"34","city":"市","state":"CN-44","postalCode":"518000","county":"福田区","country":"CN"}}],"paymentInfo":[{"id":paymentid,"billingInfo":{"name":{"firstName":"俊杰","lastName":"杨"},"address":{"address1":"大中华国际金融中心A栋","city":"深圳市","state":"CN-44","postalCode":"518000","county":"福田区","country":"CN"},"contactInfo":{"phoneNumber":"+8618665971006","email":"81140140@qq.com"}},"type":"Alipay"}]}
 pay_html = session.post(url=pay_url,headers=headers,data=json.dumps(pay_data))
 print pay_html.json()
 paymenpreview = pay_html.json()['links']['self']['ref']
@@ -80,7 +80,7 @@ checkouts_data = {"request":{"email":"81140140@qq.com",
                              "channel":"SNKRS",
                              "clientInfo":{"deviceId":"0400R9HVeoYv1gsNf94lis1ztnqv7CRnBjGO6/Ao2WE9gwpcE7v8aPDcWlOv5uA0UdlgseU3hf6ZgJHVGVmGHhZkVg779SPfw9jg/bn+kus6mYbBOmoLto4X8btxUT7HF5Mfhlz5wlRFwWJi0FRulruXQQGCQaJkXU7G/xCx87H3fYLqtP6CELnsH2G/cdkIMFbm6Yf0/pTJUUzbuPzsQkRu5wydKgnOIDKXq4HnEqNOos1c6njJgQh/4uWPf9I5I43RRL7fOkkwV0dTsyiI82NHxcfuqPY9fpixLEzP4TAbNLx4B5Y+hlUTFU590nH6wX2EIJPl7taneAp+euwBRWG3oPxIPhWfkls2Dvmh2Ql/4ZmxrGle/ZqF1WSwCPCGIJ9ojofZbR2X0CLQi4PDljQGTZxyTYzWRQCIYmH70/9WYFgrFNC6lStdnvLrIbcVhbjA6CiAMtmPSSvD4TWhv78VEIne56x7fyVRlv/nuXQXQGvX0gKDOFP1a/PoP5g1QwsR6HPyNaJmTDai9XF2InkrPPEFszfR7TVeYTtUNo5lYHxObL5PzR66nFRQJiixP4LBaxBeNabCoO0mlBgAVSsOVyyofExHIwDdyG4AHEbU3IynXrhcnO4UgCiP3k08ruO2MV2HeXfsIpcBAz+JqnVObFzqeMmBCH/ieLkYYw7gRCdLh7h/QYTtLeSWd2Bz5ubbq4HnEqNOos1/ARf3yJm6ITKx4PQbX9OHEQi+wlGoZ8WFk9C8+4pEn8Th1HyH9FgHkp62yUjciLEbPmkId7X9UBOd0/ewrrCpRONsrNmlQ0HEpvsUb5+Jr8qK4pvupFpLCfh5mpkjbY8JuvK70bwBpMhq5G0JDAEfjhfTyMu2WPU60XI1EZKVyZnHyH/spdP176ZigQa7PSc/NzbdUf1XOt8yWPvgXmLrlec+amWueJGZ4qN4QLKvqUV6ETiAWTGOqSKmGE9zDPF+pgCd2Ux7tt1mhTHKQ7jy9YMNjqOzgRW6psCbeWacXO7lr/RXFLtCT3fKaEmHgdZTpQDsI1l5pRcWvEsMdd2+SxT8V+5FRjwlPEdtOvY8eD35tOUw6jrqNh+QxW8Z/i97IRumGgXkYUn43/pPHCmdlDbGqeGq16udizKgcTSmkq/0eVBwKCbFEPNOpFjI2/6EOwkchN4u2PRWt+WNpGvHIi7SoUevORpROJ9qSFv+eJR3sCFSNJMUA7mWm5ddG/uXwr835+t4m0pJOwycmYRLIEgMnyu7KEs="},
                              "items":[{"id":"b1700e8e-f7c0-5734-bf8a-e575c82b6ec0","skuId":"14b2c9c4-fabb-5c5b-936a-26498413e21c","quantity":1,
-                                       "recipient":{"firstName":"俊杰","lastName":"杨"},"shippingAddress":{"address1":"大中华国际金融中心A栋","address2":"34","city":"深圳市","state":"CN-44","postalCode":"518000","county":"福田区","country":"CN"},"contactInfo":{"email":"81140140@qq.com","phoneNumber":"13569897885"},"shippingMethod":"GROUND_SERVICE"}],
+                                       "recipient":{"firstName":"","lastName":""},"shippingAddress":{"address1":"","address2":"34","city":"","state":"CN-44","postalCode":"518000","county":"","country":"CN"},"contactInfo":{"email":"81140140@qq.com","phoneNumber":"13569897885"},"shippingMethod":"GROUND_SERVICE"}],
                              "paymentToken":paymentToken}}
 checkouts_html = session.put(url=checkouts_url,data=json.dumps(checkouts_data),headers=headers)
 print checkouts_html.json()
