@@ -4,95 +4,95 @@ import sys
 import os
 from ctypes import *
 
-# ä¸‹è½½æ¥å£æ”¾ç›®å½• http://www.yundama.com/apidoc/YDM_SDK.html
-# é”™è¯¯ä»£ç è¯·æŸ¥è¯¢ http://www.yundama.com/apidoc/YDM_ErrorCode.html
-# æ‰€æœ‰å‡½æ•°è¯·æŸ¥è¯¢ http://www.yundama.com/apidoc
+# ÏÂÔØ½Ó¿Ú·ÅÄ¿Â¼ http://www.yundama.com/apidoc/YDM_SDK.html
+# ´íÎó´úÂëÇë²éÑ¯ http://www.yundama.com/apidoc/YDM_ErrorCode.html
+# ËùÓĞº¯ÊıÇë²éÑ¯ http://www.yundama.com/apidoc
 def img(pic):
-    # print u'>>>æ­£åœ¨åˆå§‹åŒ–...'
+    # print u'>>>ÕıÔÚ³õÊ¼»¯...'
 
     YDMApi = windll.LoadLibrary('yundamaAPI')
 
-    # 1. http://www.yundama.com/index/reg/developer æ³¨å†Œå¼€å‘è€…è´¦å·
-    # 2. http://www.yundama.com/developer/myapp æ·»åŠ æ–°è½¯ä»¶
-    # 3. ä½¿ç”¨æ·»åŠ çš„è½¯ä»¶IDå’Œå¯†é’¥è¿›è¡Œå¼€å‘ï¼Œäº«å—ä¸°åšåˆ†æˆ
+    # 1. http://www.yundama.com/index/reg/developer ×¢²á¿ª·¢ÕßÕËºÅ
+    # 2. http://www.yundama.com/developer/myapp Ìí¼ÓĞÂÈí¼ş
+    # 3. Ê¹ÓÃÌí¼ÓµÄÈí¼şIDºÍÃÜÔ¿½øĞĞ¿ª·¢£¬ÏíÊÜ·áºñ·Ö³É
 
-    appId = 3881   # è½¯ä»¶ï¼©ï¼¤ï¼Œå¼€å‘è€…åˆ†æˆå¿…è¦å‚æ•°ã€‚ç™»å½•å¼€å‘è€…åå°ã€æˆ‘çš„è½¯ä»¶ã€‘è·å¾—ï¼
-    appKey = 'd5869d7a7682b2f64b48b6edd0aec5fa'     # è½¯ä»¶å¯†é’¥ï¼Œå¼€å‘è€…åˆ†æˆå¿…è¦å‚æ•°ã€‚ç™»å½•å¼€å‘è€…åå°ã€æˆ‘çš„è½¯ä»¶ã€‘è·å¾—ï¼
+    appId = 3881   # Èí¼ş£É£Ä£¬¿ª·¢Õß·Ö³É±ØÒª²ÎÊı¡£µÇÂ¼¿ª·¢ÕßºóÌ¨¡¾ÎÒµÄÈí¼ş¡¿»ñµÃ£¡
+    appKey = 'd5869d7a7682b2f64b48b6edd0aec5fa'     # Èí¼şÃÜÔ¿£¬¿ª·¢Õß·Ö³É±ØÒª²ÎÊı¡£µÇÂ¼¿ª·¢ÕßºóÌ¨¡¾ÎÒµÄÈí¼ş¡¿»ñµÃ£¡
 
-    # print u'è½¯ä»¶ï¼©ï¼¤ï¼š%d\r\nè½¯ä»¶å¯†é’¥ï¼š%s' % (appId, appKey)
+    # print u'Èí¼ş£É£Ä£º%d\r\nÈí¼şÃÜÔ¿£º%s' % (appId, appKey)
 
-    # æ³¨æ„è¿™é‡Œæ˜¯æ™®é€šä¼šå‘˜è´¦å·ï¼Œä¸æ˜¯å¼€å‘è€…è´¦å·ï¼Œæ³¨å†Œåœ°å€ http://www.yundama.com/index/reg/user
-    # å¼€å‘è€…å¯ä»¥è”ç³»å®¢æœé¢†å–å…è´¹è°ƒè¯•é¢˜åˆ†
+    # ×¢ÒâÕâÀïÊÇÆÕÍ¨»áÔ±ÕËºÅ£¬²»ÊÇ¿ª·¢ÕßÕËºÅ£¬×¢²áµØÖ· http://www.yundama.com/index/reg/user
+    # ¿ª·¢Õß¿ÉÒÔÁªÏµ¿Í·şÁìÈ¡Ãâ·Ñµ÷ÊÔÌâ·Ö
 
-    username = ''
-    password = ''
+    username = 'alienlu'
+    password = 'hayabusa1340'
 
-    ####################### ä¸€é”®è¯†åˆ«å‡½æ•° YDM_EasyDecodeByPath #######################
+    ####################### Ò»¼üÊ¶±ğº¯Êı YDM_EasyDecodeByPath #######################
 
-    print u'>>>æ­£åœ¨ä¸€é”®è¯†åˆ«...'
+    print u'>>>ÕıÔÚÒ»¼üÊ¶±ğ...'
 
-    # ä¾‹ï¼š1004è¡¨ç¤º4ä½å­—æ¯æ•°å­—ï¼Œä¸åŒç±»å‹æ”¶è´¹ä¸åŒã€‚è¯·å‡†ç¡®å¡«å†™ï¼Œå¦åˆ™å½±å“è¯†åˆ«ç‡ã€‚åœ¨æ­¤æŸ¥è¯¢æ‰€æœ‰ç±»å‹ http://www.yundama.com/price.html
+    # Àı£º1004±íÊ¾4Î»×ÖÄ¸Êı×Ö£¬²»Í¬ÀàĞÍÊÕ·Ñ²»Í¬¡£Çë×¼È·ÌîĞ´£¬·ñÔòÓ°ÏìÊ¶±ğÂÊ¡£ÔÚ´Ë²éÑ¯ËùÓĞÀàĞÍ http://www.yundama.com/price.html
     codetype = 1004
 
-    # åˆ†é…30ä¸ªå­—èŠ‚å­˜æ”¾è¯†åˆ«ç»“æœ
+    # ·ÖÅä30¸ö×Ö½Ú´æ·ÅÊ¶±ğ½á¹û
     result = c_char_p("                              ")
 
-    # è¯†åˆ«è¶…æ—¶æ—¶é—´ å•ä½ï¼šç§’
+    # Ê¶±ğ³¬Ê±Ê±¼ä µ¥Î»£ºÃë
     timeout = 60
 
-    # éªŒè¯ç æ–‡ä»¶è·¯å¾„
+    # ÑéÖ¤ÂëÎÄ¼şÂ·¾¶
     filename = pic
 
-    # ä¸€é”®è¯†åˆ«å‡½æ•°ï¼Œæ— éœ€è°ƒç”¨ YDM_SetAppInfo å’Œ YDM_Loginï¼Œé€‚åˆè„šæœ¬è°ƒç”¨
+    # Ò»¼üÊ¶±ğº¯Êı£¬ÎŞĞèµ÷ÓÃ YDM_SetAppInfo ºÍ YDM_Login£¬ÊÊºÏ½Å±¾µ÷ÓÃ
     captchaId = YDMApi.YDM_EasyDecodeByPath(username, password, appId, appKey, filename, codetype, timeout, result)
 
-    print u"ä¸€é”®è¯†åˆ«ï¼šéªŒè¯ç IDï¼š%dï¼Œè¯†åˆ«ç»“æœï¼š%s" % (captchaId, result)
+    print u"Ò»¼üÊ¶±ğ£ºÑéÖ¤ÂëID£º%d£¬Ê¶±ğ½á¹û£º%s" % (captchaId, result)
     return result.value
 ################################################################################
 
 
-# ########################## æ™®é€šè¯†åˆ«å‡½æ•° YDM_DecodeByPath #########################
+# ########################## ÆÕÍ¨Ê¶±ğº¯Êı YDM_DecodeByPath #########################
 #
-# print('\r\n>>>æ­£åœ¨ç™»é™†...')
+# print('\r\n>>>ÕıÔÚµÇÂ½...')
 #
-# # ç¬¬ä¸€æ­¥ï¼šåˆå§‹åŒ–äº‘æ‰“ç ï¼Œåªéœ€è°ƒç”¨ä¸€æ¬¡å³å¯
+# # µÚÒ»²½£º³õÊ¼»¯ÔÆ´òÂë£¬Ö»Ğèµ÷ÓÃÒ»´Î¼´¿É
 # YDMApi.YDM_SetAppInfo(appId, appKey)
 #
-# # ç¬¬äºŒæ­¥ï¼šç™»é™†äº‘æ‰“ç è´¦å·ï¼Œåªéœ€è°ƒç”¨ä¸€æ¬¡å³å¯
+# # µÚ¶ş²½£ºµÇÂ½ÔÆ´òÂëÕËºÅ£¬Ö»Ğèµ÷ÓÃÒ»´Î¼´¿É
 # uid = YDMApi.YDM_Login(username, password)
 #
 # if uid > 0:
 #
-#     print('>>>æ­£åœ¨è·å–ä½™é¢...')
+#     print('>>>ÕıÔÚ»ñÈ¡Óà¶î...')
 #
-#     # æŸ¥è¯¢è´¦å·ä½™é¢ï¼ŒæŒ‰éœ€è¦è°ƒç”¨
+#     # ²éÑ¯ÕËºÅÓà¶î£¬°´ĞèÒªµ÷ÓÃ
 #     balance = YDMApi.YDM_GetBalance(username, password)
 #
-#     print('ç™»é™†æˆåŠŸï¼Œç”¨æˆ·åï¼š%sï¼Œå‰©ä½™é¢˜åˆ†ï¼š%d' % (username, balance))
+#     print('µÇÂ½³É¹¦£¬ÓÃ»§Ãû£º%s£¬Ê£ÓàÌâ·Ö£º%d' % (username, balance))
 #
-#     print('\r\n>>>æ­£åœ¨æ™®é€šè¯†åˆ«...')
+#     print('\r\n>>>ÕıÔÚÆÕÍ¨Ê¶±ğ...')
 #
-#     # ç¬¬ä¸‰æ­¥ï¼šå¼€å§‹è¯†åˆ«
+#     # µÚÈı²½£º¿ªÊ¼Ê¶±ğ
 #
-#     # ä¾‹ï¼š1004è¡¨ç¤º4ä½å­—æ¯æ•°å­—ï¼Œä¸åŒç±»å‹æ”¶è´¹ä¸åŒã€‚è¯·å‡†ç¡®å¡«å†™ï¼Œå¦åˆ™å½±å“è¯†åˆ«ç‡ã€‚åœ¨æ­¤æŸ¥è¯¢æ‰€æœ‰ç±»å‹ http://www.yundama.com/price.html
+#     # Àı£º1004±íÊ¾4Î»×ÖÄ¸Êı×Ö£¬²»Í¬ÀàĞÍÊÕ·Ñ²»Í¬¡£Çë×¼È·ÌîĞ´£¬·ñÔòÓ°ÏìÊ¶±ğÂÊ¡£ÔÚ´Ë²éÑ¯ËùÓĞÀàĞÍ http://www.yundama.com/price.html
 #     codetype = 1004
 #
-#     # åˆ†é…30ä¸ªå­—èŠ‚å­˜æ”¾è¯†åˆ«ç»“æœ
+#     # ·ÖÅä30¸ö×Ö½Ú´æ·ÅÊ¶±ğ½á¹û
 #     result = c_char_p("                              ")
 #
-#     # éªŒè¯ç æ–‡ä»¶è·¯å¾„
+#     # ÑéÖ¤ÂëÎÄ¼şÂ·¾¶
 #     filename = 'getimage.jpg'
 #
-#     # æ™®é€šè¯†åˆ«å‡½æ•°ï¼Œéœ€å…ˆè°ƒç”¨ YDM_SetAppInfo å’Œ YDM_Login åˆå§‹åŒ–
+#     # ÆÕÍ¨Ê¶±ğº¯Êı£¬ĞèÏÈµ÷ÓÃ YDM_SetAppInfo ºÍ YDM_Login ³õÊ¼»¯
 #     captchaId = YDMApi.YDM_DecodeByPath(filename, codetype, result)
 #
-#     print("æ™®é€šè¯†åˆ«ï¼šéªŒè¯ç IDï¼š%dï¼Œè¯†åˆ«ç»“æœï¼š%s" % (captchaId, result))
+#     print("ÆÕÍ¨Ê¶±ğ£ºÑéÖ¤ÂëID£º%d£¬Ê¶±ğ½á¹û£º%s" % (captchaId, result))
 #
 # else:
-#     print('ç™»é™†å¤±è´¥ï¼Œé”™è¯¯ä»£ç ï¼š%d' % uid)
+#     print('µÇÂ½Ê§°Ü£¬´íÎó´úÂë£º%d' % uid)
 #
 # ################################################################################
 #
-# print('\r\n>>>é”™è¯¯ä»£ç è¯·æŸ¥è¯¢ http://www.yundama.com/apidoc/YDM_ErrorCode.html')
+# print('\r\n>>>´íÎó´úÂëÇë²éÑ¯ http://www.yundama.com/apidoc/YDM_ErrorCode.html')
 #
-# raw_input('\r\næµ‹è¯•å®Œæˆï¼ŒæŒ‰å›è½¦é”®ç»“æŸ...')
+# raw_input('\r\n²âÊÔÍê³É£¬°´»Ø³µ¼ü½áÊø...')

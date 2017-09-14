@@ -1,0 +1,93 @@
+2017-09-14 10:45:13 [scrapy.utils.log] INFO: Scrapy 1.3.2 started (bot: scrapy_guahao)
+2017-09-14 10:45:13 [scrapy.utils.log] INFO: Overridden settings: {'NEWSPIDER_MODULE': 'scrapy_guahao.spiders', 'SPIDER_MODULES': ['scrapy_guahao.spiders'], 'CONCURRENT_REQUESTS': 2, 'LOG_FILE': 'scrapy.log', 'BOT_NAME': 'scrapy_guahao'}
+2017-09-14 10:45:13 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.corestats.CoreStats']
+2017-09-14 10:45:13 [requests.packages.urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): wap.91160.com
+2017-09-14 10:45:13 [requests.packages.urllib3.connectionpool] DEBUG: https://wap.91160.com:443 "GET / HTTP/1.1" 521 None
+2017-09-14 10:45:13 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2017-09-14 10:45:13 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2017-09-14 10:45:13 [scrapy.middleware] INFO: Enabled item pipelines:
+[]
+2017-09-14 10:45:13 [scrapy.core.engine] INFO: Spider opened
+2017-09-14 10:45:13 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2017-09-14 10:45:13 [scrapy.extensions.telnet] DEBUG: Telnet console listening on 127.0.0.1:6023
+2017-09-14 10:45:14 [scrapy.core.downloader.tls] WARNING: Ignoring error while verifying certificate from host "219.153.73.237" (exception: ValueError('Invalid DNS-ID.',))
+2017-09-14 10:45:14 [scrapy.core.downloader.tls] WARNING: Ignoring error while verifying certificate from host "111.13.147.234" (exception: ValueError('Invalid DNS-ID.',))
+2017-09-14 10:45:15 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://111.13.147.234/doctor/schedule.html?unit_id=131&dep_id=769&doctor_id=18241> (referer: None)
+2017-09-14 10:45:16 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://219.153.73.237/doctor/schedule.html?unit_id=131&dep_id=769&doctor_id=18241> (referer: None)
+2017-09-14 10:45:17 [scrapy.core.downloader.tls] WARNING: Ignoring error while verifying certificate from host "42.236.72.68" (exception: ValueError('Invalid DNS-ID.',))
+2017-09-14 10:45:17 [scrapy.core.downloader.tls] WARNING: Ignoring error while verifying certificate from host "183.222.96.254" (exception: ValueError('Invalid DNS-ID.',))
+2017-09-14 10:45:17 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://183.222.96.254/doctor/schedule.html?unit_id=131&dep_id=769&doctor_id=18241> (referer: None)
+2017-09-14 10:45:18 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://42.236.72.68/doctor/schedule.html?unit_id=131&dep_id=769&doctor_id=18241> (referer: None)
+2017-09-14 10:45:19 [scrapy.core.downloader.tls] WARNING: Ignoring error while verifying certificate from host "112.90.216.82" (exception: ValueError('Invalid DNS-ID.',))
+2017-09-14 10:45:20 [scrapy.core.downloader.tls] WARNING: Ignoring error while verifying certificate from host "183.222.96.202" (exception: ValueError('Invalid DNS-ID.',))
+2017-09-14 10:45:20 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://112.90.216.82/doctor/schedule.html?unit_id=131&dep_id=769&doctor_id=18241> (referer: None)
+2017-09-14 10:45:21 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://183.222.96.202/doctor/schedule.html?unit_id=131&dep_id=769&doctor_id=18241> (referer: None)
+2017-09-14 10:45:22 [scrapy.core.downloader.tls] WARNING: Ignoring error while verifying certificate from host "113.107.238.145" (exception: ValueError('Invalid DNS-ID.',))
+2017-09-14 10:45:22 [scrapy.core.downloader.tls] WARNING: Ignoring error while verifying certificate from host "117.21.219.86" (exception: ValueError('Invalid DNS-ID.',))
+2017-09-14 10:45:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://113.107.238.145/doctor/schedule.html?unit_id=131&dep_id=769&doctor_id=18241> (referer: None)
+2017-09-14 10:45:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://117.21.219.86/doctor/schedule.html?unit_id=131&dep_id=769&doctor_id=18241> (referer: None)
+2017-09-14 10:45:24 [scrapy.core.downloader.tls] WARNING: Ignoring error while verifying certificate from host "117.21.219.108" (exception: ValueError('Invalid DNS-ID.',))
+2017-09-14 10:45:24 [scrapy.core.downloader.tls] WARNING: Ignoring error while verifying certificate from host "153.37.232.103" (exception: ValueError('Invalid DNS-ID.',))
+2017-09-14 10:45:25 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://153.37.232.103/doctor/schedule.html?unit_id=131&dep_id=769&doctor_id=18241> (referer: None)
+2017-09-14 10:45:26 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://117.21.219.108/doctor/schedule.html?unit_id=131&dep_id=769&doctor_id=18241> (referer: None)
+2017-09-14 10:45:27 [scrapy.core.downloader.tls] WARNING: Ignoring error while verifying certificate from host "117.21.219.85" (exception: ValueError('Invalid DNS-ID.',))
+2017-09-14 10:45:27 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://113.107.238.145/doctor/schedule.html?unit_id=131&dep_id=769&doctor_id=18241> (referer: None)
+2017-09-14 10:45:28 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://117.21.219.85/doctor/schedule.html?unit_id=131&dep_id=769&doctor_id=18241> (referer: None)
+2017-09-14 10:45:29 [scrapy.core.downloader.tls] WARNING: Ignoring error while verifying certificate from host "112.90.216.113" (exception: ValueError('Invalid DNS-ID.',))
+2017-09-14 10:45:29 [scrapy.core.downloader.tls] WARNING: Ignoring error while verifying certificate from host "219.153.73.206" (exception: ValueError('Invalid DNS-ID.',))
+2017-09-14 10:45:29 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://112.90.216.113/doctor/schedule.html?unit_id=131&dep_id=769&doctor_id=18241> (referer: None)
+2017-09-14 10:45:30 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://219.153.73.206/doctor/schedule.html?unit_id=131&dep_id=769&doctor_id=18241> (referer: None)
+2017-09-14 10:45:32 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://153.37.232.103/doctor/schedule.html?unit_id=131&dep_id=769&doctor_id=18241> (referer: None)
+2017-09-14 10:45:33 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://42.236.72.68/doctor/schedule.html?unit_id=131&dep_id=769&doctor_id=18241> (referer: None)
+2017-09-14 10:45:34 [scrapy.core.downloader.tls] WARNING: Ignoring error while verifying certificate from host "117.21.219.63" (exception: ValueError('Invalid DNS-ID.',))
+2017-09-14 10:45:34 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://117.21.219.63/doctor/schedule.html?unit_id=131&dep_id=769&doctor_id=18241> (referer: None)
+2017-09-14 10:45:35 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://117.21.219.86/doctor/schedule.html?unit_id=131&dep_id=769&doctor_id=18241> (referer: None)
+2017-09-14 10:45:37 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://42.236.72.68/doctor/schedule.html?unit_id=131&dep_id=769&doctor_id=18241> (referer: None)
+2017-09-14 10:45:37 [scrapy.crawler] INFO: Received SIGINT, shutting down gracefully. Send again to force 
+2017-09-14 10:45:37 [scrapy.core.engine] ERROR: Error while obtaining start requests
+Traceback (most recent call last):
+  File "c:\python27\lib\site-packages\scrapy\core\engine.py", line 127, in _next_request
+    request = next(slot.start_requests)
+  File "d:\git\git\scrapy_guahao\scrapy_guahao\spiders\guahao.py", line 45, in start_requests
+    time.sleep(1)
+IOError: [Errno 4] Interrupted function call
+2017-09-14 10:45:37 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://219.153.73.237/doctor/schedule.html?unit_id=131&dep_id=769&doctor_id=18241> (referer: None)
+2017-09-14 10:45:37 [scrapy.core.engine] INFO: Closing spider (shutdown)
+2017-09-14 10:45:37 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 10941,
+ 'downloader/request_count': 20,
+ 'downloader/request_method_count/GET': 20,
+ 'downloader/response_bytes': 27324,
+ 'downloader/response_count': 20,
+ 'downloader/response_status_count/200': 20,
+ 'finish_reason': 'shutdown',
+ 'finish_time': datetime.datetime(2017, 9, 14, 2, 45, 37, 846000),
+ 'log_count/DEBUG': 23,
+ 'log_count/ERROR': 1,
+ 'log_count/INFO': 8,
+ 'log_count/WARNING': 14,
+ 'response_received_count': 20,
+ 'scheduler/dequeued': 20,
+ 'scheduler/dequeued/memory': 20,
+ 'scheduler/enqueued': 20,
+ 'scheduler/enqueued/memory': 20,
+ 'start_time': datetime.datetime(2017, 9, 14, 2, 45, 13, 788000)}
+2017-09-14 10:45:37 [scrapy.core.engine] INFO: Spider closed (shutdown)

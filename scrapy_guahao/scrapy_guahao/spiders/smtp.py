@@ -7,13 +7,13 @@ from email.mime.text import MIMEText
 def send_mail():
     date = time.strftime('%m-%d %H:%M')
 
-    mail_host = ''
+    mail_host = 'smtp.qian88.com.cn'
 
-    mail_user = 'XXX'
-    mail_passwd = 'XXXX'
+    mail_user = 'lujunjie@qian88.com.cn'
+    mail_passwd = 'hayabusa1340!#$)'
 
-    sender = 'XXXXX'
-    receivers = ['XXXX@qq.com']
+    sender = 'lujunjie@qian88.com.cn'
+    receivers = ['81140140@qq.com']
 
 
     message = MIMEText(u'挂到了')
