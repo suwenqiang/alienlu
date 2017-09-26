@@ -9,11 +9,11 @@ def send_mail(messages):
 
     mail_host = 'smtp.qian88.com.cn'
 
-    mail_user = 'lujunjie@qian88.com.cn'
-    mail_passwd = 'hayabusa1340!#$)'
+    mail_user = ''
+    mail_passwd = ''
 
-    sender = 'lujunjie@qian88.com.cn'
-    receivers = ['81140140@qq.com']
+    sender = ''
+    receivers = []
 
 
     message = MIMEText(str(messages + '挂到了'))
