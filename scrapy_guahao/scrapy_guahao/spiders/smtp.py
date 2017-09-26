@@ -4,7 +4,7 @@
 import smtplib
 import time
 from email.mime.text import MIMEText
-def send_mail():
+def send_mail(messages):
     date = time.strftime('%m-%d %H:%M')
 
     mail_host = 'smtp.qian88.com.cn'
@@ -16,8 +16,8 @@ def send_mail():
     receivers = ['81140140@qq.com']
 
 
-    message = MIMEText(u'挂到了')
-    message['Subject'] = str(date) + u'挂到了'
+    message = MIMEText(str(messages + '挂到了'))
+    message['Subject'] = str(date)
     message['From'] = sender
     message['To'] = receivers[0]
 
