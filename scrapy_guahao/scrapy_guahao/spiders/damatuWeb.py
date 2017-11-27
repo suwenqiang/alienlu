@@ -60,7 +60,7 @@ class DamatuApi():
 		
 # #调用类型实例：
 # #1.实例化类型 参数是打码兔用户账号和密码
-dmt=DamatuApi("alienlu","hayabusa1340")
+dmt=DamatuApi("","")
 # #2.调用方法：
 # print datetime.datetime.now()
 # print(dmt.decode('capcha.png',23)),datetime.datetime.now() #上传打码,
